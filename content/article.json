@@ -1,0 +1,27 @@
+[
+    {
+      "ID": "1",
+      "Title": "Pre-Wedding yang Digemari",
+      "Author": "zaydan",
+      "Thumbnail": "../img/Projects/blog-1.png",
+      "Content": "Ada beberapa konsep foto pre-wedding yang paling digemari para calon mempelai. Kami menyediakan konsultasi gratis untuk pemilihan konsep.",
+      "markdown": "article_1.md"
+    },
+    {
+      "ID": "2",
+      "Title": "Tips Foto Wisuda",
+      "Author": "shayler",
+      "Thumbnail": "../img/Projects/blog-2.png",
+      "Content": "Salah satu momen bahagia di masa dewasa yaitu masa wisuda. Rasa bangga setelah menempuh jenjang pendidikan yang lebih tinggi.",
+      "markdown": "article_2.md"
+    },
+    {
+      "ID": "3",
+      "Title": "Video Cinematic",
+      "Author": "shayler",
+      "Thumbnail": "../img/Projects/blog-3.jpg",
+      "Content": "Video Cinematic adalah sebuah video yang bercerita. Untuk itu, salah satu faktor yang harus kalian perhatikan adalah subjek.",
+      "markdown": "article_3.md"
+    }
+  ]
+  

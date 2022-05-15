@@ -1,16 +1,17 @@
 Vue.createApp({
     data() {
       return {
-        header: {},
+
+        articles: [],
       };
     },
     methods: {
-      getHeaderData() {
+      getArticleData() {
         axios
-          .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/sk1-latihan4/contents/header.json')
+          .get('https://raw.githubusercontent.com/Zaydanaymar/tekweb2022/main/sk1-latihan4/contents/articles.json')
           .then((res) => {
             console.log(res.data);
-            this.header = res.data;
+            this.articles = res.data;
           })
           .catch((error) => {
             console.log(error);
@@ -18,7 +19,7 @@ Vue.createApp({
       },
     },
     beforeMount() {
-      this.getHeaderData();
+      this.getArticleData();
     },
   }).mount('#app');
   
