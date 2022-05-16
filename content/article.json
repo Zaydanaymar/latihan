@@ -3,23 +3,23 @@
       "ID": "1",
       "Title": "Pre-Wedding yang Digemari",
       "Author": "zaydan",
-      "Thumbnail": "../img/Projects/blog-1.png",
+      "Thumbnail": "./img/weeding.png",
       "Content": "Ada beberapa konsep foto pre-wedding yang paling digemari para calon mempelai. Kami menyediakan konsultasi gratis untuk pemilihan konsep.",
       "markdown": "article_1.md"
     },
     {
       "ID": "2",
-      "Title": "Tips Foto Wisuda",
-      "Author": "shayler",
-      "Thumbnail": "../img/Projects/blog-2.png",
-      "Content": "Salah satu momen bahagia di masa dewasa yaitu masa wisuda. Rasa bangga setelah menempuh jenjang pendidikan yang lebih tinggi.",
+      "Title": "Gerakan Sejuta AlKahfi Berbagi",
+      "Author": "zaydan",
+      "Thumbnail": "./img/kammi.png",
+      "Content": "Salah satu momen bahagia di masa pandemi adalah bisa berbagi. Rasa bahagia di bawah terik matahari TPA Piyungan nampak di wajah mereka.",
       "markdown": "article_2.md"
     },
     {
       "ID": "3",
       "Title": "Video Cinematic",
-      "Author": "shayler",
-      "Thumbnail": "../img/Projects/blog-3.jpg",
+      "Author": "zaydan",
+      "Thumbnail": "./img/lensa.png",
       "Content": "Video Cinematic adalah sebuah video yang bercerita. Untuk itu, salah satu faktor yang harus kalian perhatikan adalah subjek.",
       "markdown": "article_3.md"
     }
