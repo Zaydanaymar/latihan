@@ -9,23 +9,11 @@
     <script src="https://kit.fontawesome.com/03edb6b278.js" crossorigin="anonymous"></script>
   </head>
   <body id="app">
-    <section id="main" class="center">
-      <div class="user_info">
-        <h1 class="user_name">{{header.title}}</h1>
-        <p>{{header.description}}</p>
-        <div class="sosmed center">
-          <div class="social_media_icons">
-            <a href="https://www.instagram.com/shayler15/" target="_blank_"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/zaydanaymar" target="_blank_"><i class="fab fa-github"></i></a>
-            <a href="https://www.youtube.com/channel/UCMnd8GBJrftRwc5Ubn_j9cw" target="_blank_"><i class="fab fa-youtube"></i></a>
-            <a href="https://wa.link/7ywqm5" target="_blank_"><i class="fab fa-whatsapp"></i></a>
+      <section id="read" class="center">
+        <div class="container">
+            <div v-html="article"></div>
           </div>
-        </div>
-      </div>
-      <div class="user_img">
-        <img v-bind:src="header.imageprofile">
-      </div>
-    </section>
+      </section>
 
     <!-- footer -->
     <footer class="center">
@@ -55,30 +43,37 @@
     <!-- vue js -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
         <script>
-          Vue.createApp({
-    data() {
-      return {
-        header: {},
-      };
+Vue.createApp({
+  data() {
+    return {
+      article: null,
+    };
+  },
+  methods: {
+    getMarkdownData() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const article = urlParams.get('article');
+      var converter = new showdown.Converter();
+      console.log(article);
+      axios
+        .get('https://raw.githubusercontent.com/Zaydanaymar/latihan/master/content/' + article)
+        .then((res) => {
+          var html = converter.makeHtml(res.data);
+          this.article = html;
+          console.log(html);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
-    methods: {
-      getHeaderData() {
-        axios
-          .get('https://raw.githubusercontent.com/Zaydanaymar/latihan/master/content/header.json')
-          .then((res) => {
-            console.log(res.data);
-            this.header = res.data;
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      },
-    },
-    beforeMount() {
-      this.getHeaderData();
-    },
-  }).mount('#app');
+  },
+  beforeMount() {
+    this.getMarkdownData();
+  },
+}).mount('#app');
   
         </script>
 

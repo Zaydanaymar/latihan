@@ -17,10 +17,11 @@
             <img v-bind:src="data.Thumbnail" alt="">  
           </div>
           <div class="box">
-            <h1>{{data.Title}}</h1>
+            <h2>{{data.Title}}</h2>
+            <h5 class="card-text">by : {{ data.Author }}</h5>
             <p>{{data.Content}}</p>
             <div class="links">
-              <a href="https://github.com/shubham44-code/COVID-19-Tracker" target="_blank_">Read More<i class="fas fa-arrow-right"></i></a>
+              <a :href="'./read.html?article='+data.markdown" target="_blank_">Read More<i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>

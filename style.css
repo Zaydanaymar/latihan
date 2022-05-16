@@ -185,7 +185,7 @@ body {
 }
 .article .container .main_box {
   width: 35em;
-  height: 12em;
+  height: 15em;
   margin: 0.5em 2em;
   justify-content: space-evenly;
   background: rgba(255, 255, 255, 0.116);
@@ -197,6 +197,11 @@ body {
   height: 150px;
   margin-left: 0.1em;
   font-size: 8em;
+}
+.article .container .main_box .icon img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 .article .container .main_box .box {
   width: 20em;
@@ -270,4 +275,10 @@ footer .social_media_icons a:hover i {
   font-size: 1.8em;
   padding: 0.2em;
   color: #ed8d8d;
+}
+
+#read {
+  width: 100%;
+  background: #1a1a1a;
+  padding: 6em 0;
 }
