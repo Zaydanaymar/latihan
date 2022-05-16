@@ -14,7 +14,7 @@
       <div class="container center">
         <div class="main_box center" v-for="data in articles">
           <div class="icon center">
-            <i class="fas fa-virus"></i>  
+            <img v-bind:src="data.Thumbnail" alt="">  
           </div>
           <div class="box">
             <h1>{{data.Title}}</h1>
